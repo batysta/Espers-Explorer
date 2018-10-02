@@ -7,7 +7,7 @@ This project is a fork of [Iquidus Explorer](https://github.com/iquidus/explorer
 
 ### See it in action
 
-*  [explorer.espers.club](https://explorer.espers.club)
+*  [explorer.espers.club](http://explorer.espers.club)
 
 
 ### Requires
