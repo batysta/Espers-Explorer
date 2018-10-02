@@ -105,7 +105,6 @@ The wallet connected to Ciquidus must be running with atleast the following flag
 ### Donate
     
     ESP: ES4tWtbaY6hEbBAw3ehdVKuhLv7yezCMFK
-    BTC: 1J8Chi5teDJrvBtSuQhioNCHfTNBCcCrPx
 
 ### Known Issues
 
