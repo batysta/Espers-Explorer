@@ -7,7 +7,7 @@ This project is a fork of [Iquidus Explorer](https://github.com/iquidus/explorer
 
 ### See it in action
 
-*  [explorer.chaincoin.org](https://explorer.chaincoin.org)
+*  [explorer.espers.club](https://explorer.espers.club)
 
 
 ### Requires
@@ -36,7 +36,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/suprnurd/ciquidus explorer
+    git clone https://github.com/batysta/ciquidus explorer
 
 ### Install node modules
 
@@ -104,7 +104,7 @@ The wallet connected to Ciquidus must be running with atleast the following flag
 
 ### Donate
     
-    CHC: CLkWg5YSLod772uLzsFRxHgHiWVGAJSezm
+    ESP: ES4tWtbaY6hEbBAw3ehdVKuhLv7yezCMFK
     BTC: 1J8Chi5teDJrvBtSuQhioNCHfTNBCcCrPx
 
 ### Known Issues
@@ -135,9 +135,11 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
+Copyright (c) 2018, The Espers Community
 Copyright (c) 2017, The Chaincoin Community  
 Copyright (c) 2015, Iquidus Technology  
 Copyright (c) 2015, Luke Williams  
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
