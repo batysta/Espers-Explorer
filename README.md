@@ -134,10 +134,10 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
-Copyright (c) 2018, The Espers Community
+Copyright (c) 2018, The Espers Community  
 Copyright (c) 2017, The Chaincoin Community  
 Copyright (c) 2015, Iquidus Technology  
-Copyright (c) 2015, Luke Williams  
+Copyright (c) 2015, Luke Williams   
 
 All rights reserved.
 
