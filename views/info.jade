@@ -4,136 +4,69 @@ block content
   .col-md-12.col-xs-12
     .panel.panel-default
       .panel-heading
-        strong #{settings.locale.api_title}
+        strong Update your nodes
       .panel-body
-        img(src='#{settings.logo}', style='margin:0;height:128px;')
         :markdown
-          *#{settings.locale.api_message}*
-          
-          ------
+         
 
-          ### #{settings.locale.api_calls}
-          *Return data from chaincoind*
+          ### HOW TO UPDATE YOUR NODES
+          *Just follow these steps:*
 
-          *  **getdifficulty**  
-             *#{settings.locale.api_getdifficulty}*  
-             [#{address}/api/getdifficulty](/api/getdifficulty)   
+          *  **Close the wallet.**  
 
-          *  **getconnectioncount**  
-             *#{settings.locale.api_getconnectioncount}*  
-             [#{address}/api/getconnectioncount](/api/getconnectioncount) 
+          *  **Open your Espers data folder and delete the file "peers.dat"**  
 
-          *  **getmasternodecount**  
-             *#{settings.locale.api_getmasternodecount}*  
-             [#{address}/api/getmasternodecount](/api/getmasternodecount)              
+          *  **Edit Espers.conf and delete all lines that start with “addnode=…”**       
 
-          *  **getblockcount**  
-             *#{settings.locale.api_getblockcount}*  
-             [#{address}/api/getblockcount](/api/getblockcount)
-
-          *  **getblockhash [index]**  
-             *#{settings.locale.api_getblockhash}*  
-             [#{address}/api/getblockhash?index=#{hashes.blockindex}](/api/getblockhash?index=#{hashes.blockindex})
-
-          *  **getblock [hash]**  
-             *#{settings.locale.api_getblock}*  
-             [#{address}/api/getblock?hash=#{hashes.blockhash}](/api/getblock?hash=#{hashes.blockhash})
-
-          *  **getrawtransaction [txid] [decrypt]**  
-             *#{settings.locale.api_getrawtransaction}*  
-             [#{address}/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=0](/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=0)  
-             [#{address}/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=1](/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=1)
+          *  **Copy and paste these lines into your Espers.conf:**  
+             
+            addnode=37.139.186.138:22448  
+            addnode=144.76.78.141:22448  
+            addnode=217.61.4.198:22448  
+            addnode=212.237.32.138:22448  
+            addnode=80.211.178.121:22448  
+            addnode=81.202.164.230:22448  
+            addnode=207.246.108.125:22448  
+            addnode=193.31.25.111:22448  
+            addnode=46.4.27.201:22448  
+            addnode=194.67.221.52:22448  
+            addnode=86.4.194.75:22448  
+            addnode=108.61.175.156:22448  
+            addnode=31.192.147.20:22448  
+            addnode=42.51.33.196:22448  
+            addnode=149.56.154.75:22448  
+            addnode=217.61.6.53:22448  
+            addnode=194.182.65.33:22448  
+            addnode=80.211.203.239:22448  
+            addnode=194.87.235.171:22448  
+            addnode=94.130.64.143:22448  
+            addnode=110.169.49.26:22448  
+            addnode=198.245.50.213:22448  
+            addnode=92.125.140.58:22448  
+            addnode=94.177.246.216:22448  
+            addnode=159.89.114.40:22448  
+            addnode=218.49.34.36:22448  
+            addnode=80.211.27.133:22448  
+            addnode=80.211.102.238:22448  
+            addnode=80.211.102.142:22448  
+            addnode=80.211.242.126:22448  
         
-
-        if settings.index.show_hashrate == true
-          :markdown
-            *  **getnetworkhashps**  
-               *#{settings.locale.api_getnetworkhashps}*  
-               [#{address}/api/getnetworkhashps](/api/getnetworkhashps)
-
-
-
-        if settings.heavy == true
-          :markdown
-            *  **getmaxmoney**  
-               *#{settings.locale.api_getmaxmoney}*  
-               [#{address}/api/getmaxmoney](/api/getmaxmoney)
-            
-            *  **getmaxvote**  
-               *#{settings.locale.api_getmaxvote}*  
-               [#{address}/api/getmaxvote](/api/getmaxvote)
-
-            *  **getvote**  
-               *#{settings.locale.api_getvote}*  
-               [#{address}/api/getvote](/api/getvote)
-
-            *  **getphase**  
-               *#{settings.locale.api_getphase}*  
-               [#{address}/api/getphase](/api/getphase)
-
-            *  **getreward**  
-               *#{settings.locale.api_getreward}*  
-               [#{address}/api/getreward](/api/getreward)
-
-            *  **getsupply**  
-               *#{settings.locale.api_getsupply}*  
-               [#{address}/api/getsupply](/api/getsupply)  
-
-            *  **getnextrewardestimate**  
-               *#{settings.locale.api_getnextrewardestimate}*  
-               [#{address}/api/getnextrewardestimate](/api/getnextrewardestimate)
-
-            *  **getnextrewardwhenstr**  
-               *#{settings.locale.api_getnextrewardwhenstr}*  
-               [#{address}/api/getnextrewardwhenstr](/api/getnextrewardwhenstr)                                                       
-
         :markdown
           ------
 
-          ### Extended API 
-          *Return data from local indexes*
+          ### How-to Guides
+          *Step by step how to do*
 
-          *  **getmoneysupply**  
-               *Returns current money supply*  
-               [#{address}/ext/getmoneysupply](/ext/getmoneysupply)
+          *  **Snapshot how to**  
+          *[https://blog.espers.io/using-the-snapshot-d8eb6d1cb3f6](https://blog.espers.io/using-the-snapshot-d8eb6d1cb3f6)*
 
-          *  **getdistribution**  
-               *Returns wealth distribution stats*  
-               [#{address}/ext/getdistribution](/ext/getdistribution)               
+          *  **Setting up the Espers wallets**  
+          *[https://blog.espers.io/how-to-install-espers-wallet-on-the-raspberry-pi-d6837d477ca8](https://blog.espers.io/how-to-install-espers-wallet-on-the-raspberry-pi-d6837d477ca8)*
 
-          *  **getaddress (/ext/getaddress/hash)**  
-               *Returns information for given address*  
-               [#{address}/ext/getaddress/#{hashes.address}](/ext/getaddress/#{hashes.address})
+          *  **Espers Wallet on the Raspberry Pi 3**  
+          *[https://blog.espers.io/getting-espers-wallet-and-setting-it-up-1ac91c0bfd21](https://blog.espers.io/getting-espers-wallet-and-setting-it-up-1ac91c0bfd21)*
 
-          *  **getbalance (/ext/getbalance/hash)**  
-               *Returns current balance of given address*  
-               [#{address}/ext/getbalance/#{hashes.address}](/ext/getbalance/#{hashes.address})
-
-          *  **getlasttxs (/ext/getlasttxs/count/min)**  
-               *Returns last [count] transactions greater than [min]*  
-               *Note: returned values are in satoshis*  
-               [#{address}/ext/getlasttxs/10/100](/ext/getlasttxs/10/100)
-
-          ------
-
-          ### Linking (GET)
-          *Linking to the block explorer*
-
-          *  **transaction (/tx/txid)**  
-             [#{address}/tx/#{hashes.txhash}](/tx/#{hashes.txhash})
-
-          *  **block (/block/hash)**  
-             [#{address}/block/#{hashes.blockhash}](/block/#{hashes.blockhash})
-    
-          *  **address (/address/hash)**  
-             [#{address}/address/#{hashes.address}](/address/#{hashes.address})
-
-          *  **qrcode (/qr/hash)**  
-             [#{address}/qr/#{hashes.address}](/qr/#{hashes.address})
-
-        p&nbsp;
-        a(href="https://www.ubuntu.com/", target='_blank')
-          span.glyphicon.fa.fa-linux(style='width:40px;')
+          *  **This and more can be found on our blog**  
+          *[https://blog.espers.io](https://blog.espers.io)*
 
     .footer-padding
-
