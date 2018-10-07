@@ -5,18 +5,18 @@
 */
 {
   // name your instance!
-  "title": "CIQUIDUS",
+  "title": "Espers Block Explorer",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "Chaincoin",
+  "coin": "ESPERS",
 
   // coin symbol
-  "symbol": "CHC",
+  "symbol": "ESP",
 
   // logo
-  "logo": "/images/chain_dark-128x128.png",
+  "logo": "/images/logo.png",
 
   // favicon
   "favicon": "public/favicon.ico",
@@ -33,7 +33,7 @@
 
   // database settings (MongoDB)
   "dbsettings": {
-    "user": "ciquidus",
+    "user": "espers",
     "password": "3xp!0reR",
     "database": "explorerdb",
     "address": "localhost",
@@ -48,7 +48,7 @@
   "wallet": {
     "host": "localhost",
     "port": 11995,
-    "user": "chaincoinrpc",
+    "user": "espersrpc",
     "pass": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
   },
 
@@ -84,23 +84,23 @@
 
   // ensure links on API page are valid
   "api": {
-    "blockindex": 1337,
-    "blockhash": "00000000001b8c30360db57b575b3c2bf668b0ed50683f567afd47ae1773efb8",
-    "txhash": "285feead54e322aa69f649c4078766171df358a12f5f1517d61f303780e25511",
-    "address": "CaxX1HVWzbQ516w61XbtHR63vNmp2mvLMZ"
+    "blockindex": 780738,
+    "blockhash": "ac360a0546370eba6928c74cbd4c2b85ce68554039d7199eff2347f958fb3838",
+    "txhash": "cd3f1a5d2405c2459fd623e11b69adae46dcf770fe3f4974e4faec0ee5684c6c",
+    "address": "ETVuq6ivdocX8V4ZSwjoKT5gVLQ5ZXsFen"
   },
 
   // market settings
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex, coinexchange
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "CHC",
+    "coin": "ESP",
     "exchange": "BTC",
-    "enabled": ["cryptopia"],
+    "enabled": ["coinexchange"],
     "cryptopia_id": "2186",
     "ccex_key" : "Get-Your-Own-Key",
-    "coinexchange_id": "18",
-    "default": "cryptopia"
+    "coinexchange_id": "167",
+    "default": "coinexchange"
   },
 
   // richlist/top100 settings
@@ -114,19 +114,19 @@
   // low flag: greater than this value flagged yellow
   // high flag: greater than this value flagged red
   "movement": {
-    "min_amount": 100,
-    "low_flag": 1000,
-    "high_flag": 5000
+    "min_amount": 1000000,
+    "low_flag": 20000000,
+    "high_flag": 5000000
   },
 
   // twitter, facebook, googleplus, bitcointalk, github, slack, website
-  "twitter": "suprnurd",
+  "twitter": "EspersCoin",
   "facebook": "yourfacebookpage",
-  "googleplus": "yourgooglepluspage",
-  "bitcointalk": "yourbitcointalktopicvalue",
-  "github": "yourgithubusername/yourgithubrepo",
-  "slack": "yourfullslackinviteurl",
-  "website": "yourfullwebsiteurl",
+  "googleplus": "https://t.me/EspersCoin",
+  "bitcointalk": "1434700",
+  "github": "cryptocoderz/espers",
+  "slack": "https://discord.gg/hhYP8yT",
+  "website": "https://espers.io",
 
   //genesis
   "genesis_tx": "fa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88",
@@ -139,7 +139,7 @@
   "txcount": 100,
 
   //show total sent & received on address page (set false if PoS)
-  "show_sent_received": true,
+  "show_sent_received": false,
 
   // how to calculate current coin supply
   // COINBASE : total sent from coinbase (PoW)
@@ -147,16 +147,16 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "TXOUTSET",
+  "supply": "GETINFO",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
   // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
-  "nethash": "getnetworkhashps",
+  "nethash": "netmhashps",
 
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
-  "nethash_units": "G",
+  "nethash_units": "M",
 
   // Address labels
   // example : "CGTta3M4t3yXu8uRgkKvaWd2d8DQvDPnpL": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
