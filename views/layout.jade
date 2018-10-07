@@ -5,7 +5,7 @@ html
     link(rel='stylesheet', href='/themes/#{settings.theme}/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/jqplot/jquery.jqplot.css')
     link(rel='stylesheet', href='//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.css')
-    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
     script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
@@ -92,12 +92,13 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') #{settings.coin}
+          a(href='/')
+           img(src='https://explorer.espers.io/images/esplogo.png')
         .collapse.navbar-collapse(id='navbar-collapse')
           ul.nav.navbar-nav
             li#home
               a.navbar-link(href='/')
-                span.glyphicon.glyphicon-search
+                i.fas.fa-search-dollar
                 span.menu-text #{settings.locale.menu_explorer}
             if settings.heavy == true
               li#reward
@@ -107,28 +108,28 @@ html
             if settings.display.movement == true
               li#movement
                 a.navbar-link.loading(href='/movement')
-                  span.fa.fa-money
+                  i.fas.fa-money-bill-wave
                   span.menu-text #{settings.locale.menu_movement}
             if settings.display.network == true
               li#network
                 a.navbar-link(href='/network')
-                  span.fa.fa-share-alt
+                  i.fab.fa-hubspot
                   span.menu-text #{settings.locale.menu_network}
             if settings.display.richlist == true
               li#richlist
                 a.navbar-link(href='/richlist')
-                  span.fa.fa-btc
+                  i.fas.fa-dollar-sign
                   span.menu-text #{settings.locale.menu_richlist}
             if settings.display.markets == true
               li#markets
                 a.navbar-link.loading(href='/markets/#{settings.markets.default}')
-                  span.fa.fa-line-chart
+                  i.fas.fa-chart-line
                   span.menu-text #{settings.locale.menu_markets}
             if settings.display.api == true
               li#info
                 a.navbar-link(href='/info')
-                  span.glyphicon.glyphicon-info-sign
-                  span.menu-text #{settings.locale.menu_api}
+                  i.fas.fa-info-circle
+                  span.menu-text Node List
 
     .col-md-12
       .row.text-center
@@ -149,7 +150,7 @@ html
                 strong #{settings.locale.network} (H/s)
             .panel-body
               #hashratepanel
-                span.glyphicon.fa.fa-gears
+                i.fas.fa-cogs
                 if settings.index.difficulty == 'Hybrid'
                   label#hashrate -
                   <br>
@@ -162,7 +163,7 @@ html
               strong #{settings.locale.difficulty}
             .panel-body
               #difficultypanel
-                span.glyphicon.fa.fa-sliders
+                i.fas.fa-sliders-h
                 if settings.index.difficulty == 'Hybrid'
                   label#difficulty -
                   <br>
@@ -177,7 +178,7 @@ html
               strong #{settings.locale.ex_supply} (#{settings.symbol})
             .panel-body
               #supplypanel
-                span.glyphicon.fa.fa-pie-chart
+                i.fas.fa-chart-pie
                 if settings.index.difficulty == 'Hybrid'
                   label#supply -
                   <br>
@@ -190,7 +191,7 @@ html
               strong #{settings.markets.exchange} Price
             .panel-body
               #pricepanel
-                span.glyphicon.fa.fa-rocket
+                i.fas.fa-rocket
                 if settings.index.difficulty == 'Hybrid'
                   label#lastPrice -
                   <br>
@@ -210,42 +211,47 @@ html
           ul.nav.navbar-nav
             li.pull-left
               a#github-icon(href="https://github.com/#{settings.github}", target='_blank')
-                span.glyphicon.fa.fa-github
+                i.fab.fa-github
         if settings.display.slack
           ul.nav.navbar-nav
             li.pull-left
               a#slack-icon(href="#{settings.slack}", target='_blank')
-                span.glyphicon.fa.fa-slack
+                i.fab.fa-discord
         if settings.display.twitter
           ul.nav.navbar-nav
             li.pull-left
               a#twitter-icon(href="https://twitter.com/#{settings.twitter}", target='_blank')
-                span.glyphicon.fa.fa-twitter
+                i.fab.fa-twitter
+        if settings.display.reddit
+          ul.nav.navbar-nav
+            li.pull-left
+              a#googleplus-icon(href="https://www.reddit.com/r/esperscoin/", target='_blank')
+                i.fab.fa-reddit
         if settings.display.facebook
           ul.nav.navbar-nav
             li.pull-left
               a#facebook-icon(href="https://www.facebook.com/#{settings.facebook}", target='_blank')
-                span.glyphicon.fa.fa-facebook
+                i.fab.fa-facebook
         if settings.display.googleplus
           ul.nav.navbar-nav
             li.pull-left
-              a#googleplus-icon(href="https://plus.google.com/#{settings.googleplus}", target='_blank')
-                span.glyphicon.fa.fa-google-plus
+              a#googleplus-icon(href="#{settings.googleplus}", target='_blank')
+                i.fab.fa-telegram
         if settings.display.bitcointalk
           ul.nav.navbar-nav
             li.pull-left
               a#bitcointalk-icon(href="https://bitcointalk.org/index.php?topic=#{settings.bitcointalk}", target='_blank')
-                span.glyphicon.fa.fa-btc
+                i.fab.fa-btc
         if settings.display.website
           ul.nav.navbar-nav
             li.pull-left
               a#website-icon(href="#{settings.website}", target='_blank')
-                span.glyphicon.fa.fa-link
+                i.fas.fa-link
       .col-md-4
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
             p(style='margin-top:15px;')
-              a.navbar-link(href='https://github.com/suprnurd/ciquidus', target='_blank') Ciquidus Alpha
+              a.navbar-link(href='https://github.com/suprnurd/ciquidus', target='_blank') Espers Explorer - Ciquidus Alpha
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -
