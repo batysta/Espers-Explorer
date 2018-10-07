@@ -53,7 +53,7 @@
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 1,
 
   // language settings
   "locale": "locale/en.json",
@@ -65,11 +65,11 @@
     "richlist": true,
     "twitter": true,
     "facebook": false,
-    "googleplus": false,
-    "bitcointalk": false,
-    "website": false,
-    "slack": false,
-    "github": false,
+    "googleplus": true,
+    "bitcointalk": true,
+    "website": true,
+    "slack": true,
+    "github": true,
     "search": true,
     "movement": true,
     "network": true
@@ -78,7 +78,7 @@
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
     "show_hashrate": true,
-    "difficulty": "POW",
+    "difficulty": "Hybrid",
     "last_txs": 100
   },
 
@@ -119,6 +119,12 @@
     "high_flag": 5000000
   },
 
+// Peers page settings
+// ipstack_api_key: ipstack.com Geo IP. This is the replacement of http://freegeoip.net You need an API Key for the Requests 
+  "peers": {
+    "ipstack_api_key": "your_api_key" 
+  },
+  
   // twitter, facebook, googleplus, bitcointalk, github, slack, website
   "twitter": "EspersCoin",
   "facebook": "yourfacebookpage",
