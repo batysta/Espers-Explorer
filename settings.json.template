@@ -64,6 +64,7 @@
     "markets": true,
     "richlist": true,
     "twitter": true,
+    "reddit": true,
     "facebook": false,
     "googleplus": true,
     "bitcointalk": true,
